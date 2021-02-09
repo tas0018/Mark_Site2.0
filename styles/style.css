@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+/*Sass Variables*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: Arvo;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*Hero Section Start*/
+#hero {
+  background-image: url(/images/top-down-earth.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+/*Overlay for hero image*/
+#hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: .4;
+  z-index: -1;
+}
+
+#hero h1 {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: white;
+}
+
+#hero .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#hero a {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 20px;
+}
+
+/*Hero Section End*/
+/* About Section Starts*/
+#about {
+  background-image: url(/images/stephen-dawson-qwtCeJ5cLYs-unsplash.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+#about::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+  opacity: .4;
+  z-index: -1;
+}
+
+#about .about {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 10rem;
+}
+
+#about .section-title {
+  font-size: 4rem;
+  padding-bottom: 3rem;
+  color: white;
+}
+
+#about .about-tabs {
+  padding: 0 2rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+/* About Section Ends*/
+/*# sourceMappingURL=style.css.map */
