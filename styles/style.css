@@ -84,6 +84,29 @@ a {
 }
 
 /*Hero Section End*/
+/*Intro Section Starts*/
+#intro .container {
+  display: block;
+}
+
+#intro h1 {
+  font-size: 4rem;
+  padding-top: 12rem;
+  padding-bottom: 10rem;
+  color: #515151;
+  text-align: center;
+  margin: 0 4rem;
+}
+
+#intro p {
+  color: #515151;
+  padding-bottom: 3rem;
+  text-align: center;
+  margin: 0 12rem;
+  font-size: 2rem;
+}
+
+/*Intro Section End*/
 /* About Section Starts*/
 #about {
   background-image: url(/images/stephen-dawson-qwtCeJ5cLYs-unsplash.jpg);
@@ -120,15 +143,124 @@ a {
   font-size: 4rem;
   padding-bottom: 3rem;
   color: white;
+  text-align: center;
 }
 
-#about .about-tabs {
+#about .about-tabs p {
   padding: 0 2rem;
   line-height: 2rem;
   font-size: 1.5rem;
   text-align: center;
   color: white;
+  padding-bottom: 6rem;
+}
+
+.circle-line-tabs ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.circle-line-tabs li {
+  padding: 0 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.circle-line-tabs li:hover {
+  color: gold;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.far.fa-circle {
+  display: inline-block;
 }
 
 /* About Section Ends*/
+/* Slider Section Starts*/
+.slide img {
+  width: 100%;
+  height: 100vh;
+}
+
+.img-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #1d212b;
+}
+
+.img-slider .slide {
+  z-index: 1;
+  position: absolute;
+  -webkit-clip-path: circle(0% at 0 50%);
+          clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide.activeSlide {
+  -webkit-clip-path: circle(150% at 0 50%);
+          clip-path: circle(150% at 0 50%);
+  -webkit-transition: .90s;
+  transition: .90s;
+  -webkit-transition-property: -webkit-clip-path;
+  transition-property: -webkit-clip-path;
+  transition-property: clip-path;
+  transition-property: clip-path, -webkit-clip-path;
+}
+
+.img-slider .slide .info {
+  position: absolute;
+  top: 0;
+  padding: 9rem 13rem;
+}
+
+.img-slider .slide .info h2 {
+  color: white;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .4rem;
+}
+
+.img-slider .slide .info p {
+  color: white;
+  font-size: 2rem;
+  width: 70%;
+  padding: 2rem;
+}
+
+.img-slider .navigation {
+  z-index: 2;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn {
+  color: white;
+  width: 16px;
+  height: 16px;
+  margin: 1rem;
+}
+
+.img-slider .navigation .btn.activeSlide {
+  color: blue;
+}
 /*# sourceMappingURL=style.css.map */

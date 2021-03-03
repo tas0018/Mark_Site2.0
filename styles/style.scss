@@ -81,6 +81,32 @@ a {
 
 /*Hero Section End*/
 
+/*Intro Section Starts*/
+#intro .container{
+    display: block;
+}
+
+#intro h1 {
+    font-size: 4rem;
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+    color: $mainFontColor;
+    text-align: center;
+    margin: 0 4rem;
+}
+
+#intro p {
+    color: $mainFontColor;
+    padding-bottom: 3rem;
+    text-align: center;
+    margin: 0 12rem;
+    font-size: 2rem;
+
+}
+
+/*Intro Section End*/
+
+
 /* About Section Starts*/
 #about {    
 background-image: url(/images/stephen-dawson-qwtCeJ5cLYs-unsplash.jpg);
@@ -113,15 +139,121 @@ z-index: 1;
     font-size: 4rem;
     padding-bottom: 3rem;
     color: $secondaryFontColor;
+    text-align: center;
 }
 
-#about .about-tabs {
+#about .about-tabs p {
     padding: 0 2rem;
     line-height: 2rem;
     font-size: 1.5rem;
     text-align: center;
     color: $secondaryFontColor;
+    padding-bottom: 6rem;
+}
+
+.circle-line-tabs ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.circle-line-tabs li {
+    padding: 0 1rem;
+    color: $secondaryFontColor;
+    cursor: pointer;
+}
+
+.circle-line-tabs li:hover {
+    color: gold;
+}
+
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.far.fa-circle {
+    display: inline-block;
 }
 
 
 /* About Section Ends*/
+
+/* Slider Section Starts*/
+
+.slide img{
+    width: 100%;
+    height: 100vh;
+}
+
+.img-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #1d212b;
+}
+
+.img-slider .slide{
+    z-index: 1;
+    position: absolute;
+    clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide.activeSlide{
+    clip-path: circle(150% at 0 50%);
+    transition: .90s;
+    transition-property: clip-path;
+}
+
+.img-slider .slide .info{
+    position: absolute;
+    top: 0;
+    padding: 9rem 13rem;
+}
+
+.img-slider .slide .info h2 {
+    color: $secondaryFontColor;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .4rem;
+}
+
+.img-slider .slide .info p {
+    color: $secondaryFontColor;
+    font-size: 2rem;
+    width: 70%;
+    padding: 2rem;
+}
+
+.img-slider .navigation{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn {
+    color: $secondaryFontColor;
+    width: 16px;
+    height: 16px;
+    margin: 1rem;
+}
+
+.img-slider .navigation .btn.activeSlide {
+    color: blue;
+}
+
+
+.img-slider .slide .info h2 {
+
+}
+
