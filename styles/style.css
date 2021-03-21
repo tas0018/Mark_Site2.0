@@ -30,6 +30,79 @@ a {
           justify-content: center;
 }
 
+/*Nav Code Starts*/
+nav.nav {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  padding-right: 1em;
+  z-index: 2;
+}
+
+nav.nav ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+}
+
+nav.nav ul a {
+  text-decoration: none;
+  color: #990000;
+}
+
+nav.nav ul li {
+  margin: 1em 0;
+  -webkit-transition: linear 0.1s;
+  transition: linear 0.1s;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+}
+
+nav.nav ul .label-wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+}
+
+nav.nav ul i {
+  padding-left: 1em;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+}
+
+nav.nav ul h3 {
+  color: rgba(0, 0, 0, 0);
+}
+
+nav.nav ul i:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+nav.nav ul .activeNav {
+  color: blue;
+}
+
+nav.nav .label-wrapper:hover {
+  color: blue;
+}
+
+nav.nav .label-wrapper:hover h3 {
+  color: blue;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+}
+
+/*Nav Code Here*/
 /*Hero Section Start*/
 #hero {
   background-image: url(/images/top-down-earth.jpg);
@@ -49,7 +122,7 @@ a {
   width: 100%;
   background-color: black;
   opacity: .4;
-  z-index: -1;
+  z-index: -2;
 }
 
 #hero h1 {
@@ -263,4 +336,189 @@ a {
 .img-slider .navigation .btn.activeSlide {
   color: blue;
 }
+
+/*Contact Us Section Start*/
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 3rem 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url(/images/contact-us-background.jpg);
+  background-size: cover;
+  margin-top: 5rem;
+}
+
+.contact .content {
+  max-width: 90%;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+.contact .content .subtitle {
+  color: white;
+}
+
+.contact-wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  margin: 6rem;
+}
+
+.contact .contact-info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 13rem;
+}
+
+.contact .contact-info .info-box {
+  position: relative;
+  padding: 2.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.contact .contact-info .info-box .icon {
+  min-width: 6rem;
+  height: 6rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.contact .contact-info .info-box .info-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+  margin-top: 0.6rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: white;
+}
+
+.contact .contact-info .info-box .info-text h3 {
+  font-weight: 500;
+  color: #00bcd4;
+}
+
+.contact .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  padding: 0 4rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  background: #fff;
+  text-align: left;
+}
+
+.contact .contact-form h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact .contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.contact .contact-form .input-box input,
+.contact .contact-form .input-box textarea {
+  width: 100%;
+  padding: 0.12rem 0;
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin: 0.7rem 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contact .contact-form .input-box span {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  padding: 0.2rem;
+  margin: .7rem 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box input:valid ~ span,
+.contact-form .input-box textarea:focus ~ span,
+.contact-form .input-box textarea:valid ~ span {
+  color: #00bcd4;
+  font-size: 1.2rem;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type="submit"] {
+  width: 8rem;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 1.6rem;
+  margin-left: 27%;
+}
+
+/*Contact Us Section End*/
+/*Media Queries Start*/
 /*# sourceMappingURL=style.css.map */

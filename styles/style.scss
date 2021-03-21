@@ -5,6 +5,7 @@ $primaryVertNavColor: rgb(34, 72, 240);
 $mainFont: Arvo;
 $mainFontColor: #515151;
 $secondaryFontColor: white;
+$tertiaryFontColor: #00bcd4;
 
 
 * {
@@ -29,6 +30,77 @@ a {
     justify-content: center;
 }
 
+/*Nav Code Starts*/
+nav.nav{
+    position: fixed;
+    top: 40%;
+    right: 0;
+    padding-right: 1em;
+    z-index: 2;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: darken($color: red, $amount: 20%);
+
+          
+        }
+
+        li {
+            margin: 1em 0;
+            transition: linear 0.1s;
+            transition: color 0.1s;
+            
+        }
+
+        .label-wrapper {
+            display: inline-flex;
+            transition: color 0.1s;
+        }
+
+        i {
+            padding-left: 1em;
+            transition: color 0.1s;
+        }
+
+        h3 {
+            color: rgba(0, 0, 0, 0);
+        }
+        
+        & i:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 255, 1);
+
+        }
+
+        & .activeNav {
+            color: blue;
+        }
+
+    }
+
+    .label-wrapper:hover{
+        color: rgba(0, 0, 255, 1);
+
+        h3{
+            color: rgba(0, 0, 255, 1);
+            transition: color 0.1s;
+        }
+    }
+
+    
+}
+
+
+
+/*Nav Code Here*/
+
 /*Hero Section Start*/
 #hero {
     background-image: url(/images/top-down-earth.jpg);
@@ -48,7 +120,7 @@ a {
     width: 100%;
     background-color: black;
     opacity: .4;
-    z-index: -1;
+    z-index: -2;
 }
 
 #hero h1{
@@ -257,3 +329,154 @@ z-index: 1;
 
 }
 
+/*Contact Us Section Start*/
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 3rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(/images/contact-us-background.jpg);
+    background-size: cover;
+    margin-top: 5rem;
+}
+
+.contact .content {
+    max-width: 90%;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    font-weight: 500;
+    color: $secondaryFontColor;
+}
+
+.contact .content .subtitle{
+    color: $secondaryFontColor;
+}
+
+.contact-wrapper {
+    display: inline-flex;
+    width: 100%;
+    margin: 6rem;
+}
+
+.contact .contact-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 13rem;
+}
+
+.contact .contact-info .info-box{
+    position: relative;
+    padding: 2.5rem 0;
+    display: flex;
+    margin-top: 0.9rem;
+    margin-bottom: 0.9rem;
+}
+
+.contact .contact-info .info-box .icon {
+    min-width: 6rem;
+    height: 6rem;
+    background: $secondaryFontColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.contact .contact-info .info-box .info-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 0.6rem;
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: $secondaryFontColor;
+}
+
+.contact .contact-info .info-box .info-text h3 {
+    font-weight: 500;
+    color: $tertiaryFontColor;
+}
+
+.contact .contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 0 4rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    background: #fff;
+    text-align: left;
+}
+
+.contact .contact-form h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    
+}
+
+.contact .contact-form .input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.contact .contact-form .input-box input,
+.contact .contact-form .input-box textarea{
+    width: 100%;
+    padding: 0.12rem 0;
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin: 0.7rem 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+
+
+.contact .contact-form .input-box span {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    padding: 0.2rem;
+    margin: .7rem 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box input:valid ~ span,
+.contact-form .input-box textarea:focus ~ span,
+.contact-form .input-box textarea:valid ~ span{
+    color: $tertiaryFontColor;
+    font-size: 1.2rem;
+    transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type="submit"] {
+    width: 8rem;
+    background: $tertiaryFontColor;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 1.6rem;
+    margin-left: 27%;
+}
+
+/*Contact Us Section End*/
+
+/*Media Queries Start*/
