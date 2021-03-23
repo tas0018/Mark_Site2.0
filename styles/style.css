@@ -12,6 +12,10 @@ html {
   font-family: Arvo;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -31,77 +35,6 @@ a {
 }
 
 /*Nav Code Starts*/
-nav.nav {
-  position: fixed;
-  top: 40%;
-  right: 0;
-  padding-right: 1em;
-  z-index: 2;
-}
-
-nav.nav ul {
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  list-style: none;
-}
-
-nav.nav ul a {
-  text-decoration: none;
-  color: #990000;
-}
-
-nav.nav ul li {
-  margin: 1em 0;
-  -webkit-transition: linear 0.1s;
-  transition: linear 0.1s;
-  -webkit-transition: color 0.1s;
-  transition: color 0.1s;
-}
-
-nav.nav ul .label-wrapper {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-transition: color 0.1s;
-  transition: color 0.1s;
-}
-
-nav.nav ul i {
-  padding-left: 1em;
-  -webkit-transition: color 0.1s;
-  transition: color 0.1s;
-}
-
-nav.nav ul h3 {
-  color: rgba(0, 0, 0, 0);
-}
-
-nav.nav ul i:hover {
-  cursor: pointer;
-  color: blue;
-}
-
-nav.nav ul .activeNav {
-  color: blue;
-}
-
-nav.nav .label-wrapper:hover {
-  color: blue;
-}
-
-nav.nav .label-wrapper:hover h3 {
-  color: blue;
-  -webkit-transition: color 0.1s;
-  transition: color 0.1s;
-}
-
 /*Nav Code Here*/
 /*Hero Section Start*/
 #hero {
@@ -334,7 +267,7 @@ nav.nav .label-wrapper:hover h3 {
 }
 
 .img-slider .navigation .btn.activeSlide {
-  color: blue;
+  color: #00bcd4;
 }
 
 /*Contact Us Section Start*/
@@ -443,6 +376,20 @@ nav.nav .label-wrapper:hover h3 {
   color: #00bcd4;
 }
 
+.contact .contact-info .info-box .info-text .info-link:link {
+  color: white;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact .contact-info .info-box .info-text .info-link:visited {
+  color: white;
+}
+
+.contact .contact-info .info-box .info-text .info-link:hover {
+  color: #00bcd4;
+}
+
 .contact .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -521,4 +468,45 @@ nav.nav .label-wrapper:hover h3 {
 
 /*Contact Us Section End*/
 /*Media Queries Start*/
+/*Small Devices and cell phones 600px and lower*/
+@media only screen and (max-width: 600px) {
+  .slide img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .contact {
+    padding: 6rem 0;
+  }
+  .contact .content {
+    max-width: 90%;
+  }
+  .contact-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  .contact .contact-info {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 7.3rem;
+  }
+  .contact .contact-info .info-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact .contact-info .info-box .icon {
+    width: 6rem;
+  }
+  .contact .contact-form {
+    width: auto;
+  }
+}
 /*# sourceMappingURL=style.css.map */

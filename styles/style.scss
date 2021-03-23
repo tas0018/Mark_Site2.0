@@ -18,6 +18,11 @@ html{
     font-size: 10px;
     font-family: $mainFont;
 }
+
+html, body{
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
 }
@@ -31,73 +36,6 @@ a {
 }
 
 /*Nav Code Starts*/
-nav.nav{
-    position: fixed;
-    top: 40%;
-    right: 0;
-    padding-right: 1em;
-    z-index: 2;
-
-    ul {
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-
-        list-style: none;
-        a {
-            text-decoration: none;
-            color: darken($color: red, $amount: 20%);
-
-          
-        }
-
-        li {
-            margin: 1em 0;
-            transition: linear 0.1s;
-            transition: color 0.1s;
-            
-        }
-
-        .label-wrapper {
-            display: inline-flex;
-            transition: color 0.1s;
-        }
-
-        i {
-            padding-left: 1em;
-            transition: color 0.1s;
-        }
-
-        h3 {
-            color: rgba(0, 0, 0, 0);
-        }
-        
-        & i:hover {
-            cursor: pointer;
-            color: rgba(0, 0, 255, 1);
-
-        }
-
-        & .activeNav {
-            color: blue;
-        }
-
-    }
-
-    .label-wrapper:hover{
-        color: rgba(0, 0, 255, 1);
-
-        h3{
-            color: rgba(0, 0, 255, 1);
-            transition: color 0.1s;
-        }
-    }
-
-    
-}
-
-
 
 /*Nav Code Here*/
 
@@ -321,7 +259,7 @@ z-index: 1;
 }
 
 .img-slider .navigation .btn.activeSlide {
-    color: blue;
+    color: $tertiaryFontColor;
 }
 
 
@@ -406,6 +344,21 @@ z-index: 1;
     color: $tertiaryFontColor;
 }
 
+.contact .contact-info .info-box .info-text .info-link:link {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact .contact-info .info-box .info-text .info-link:visited {
+    color: white;
+}
+
+.contact .contact-info .info-box .info-text .info-link:hover {
+    color: $tertiaryFontColor;
+   
+    
+}
+
 .contact .contact-form {
     display: flex;
     align-items: center;
@@ -480,3 +433,45 @@ z-index: 1;
 /*Contact Us Section End*/
 
 /*Media Queries Start*/
+
+/*Small Devices and cell phones 600px and lower*/
+@media only screen and (max-width: 600px) {
+    .slide img {
+        object-fit: cover;
+    }
+    
+    .contact {
+        padding: 6rem 0;
+    }
+
+    .contact .content{
+        max-width: 90%;
+    }
+
+
+    .contact-wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact .contact-info {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 7.3rem;
+    }
+
+    .contact .contact-info .info-box {
+        display: flex;
+    }
+
+    .contact .contact-info .info-box .icon {
+        width: 6rem;
+    }
+
+    .contact .contact-form {
+        width: auto;
+    }
+}
