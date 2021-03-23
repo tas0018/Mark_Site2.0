@@ -270,6 +270,12 @@ a {
   color: #00bcd4;
 }
 
+/*History Section Starts*/
+.history .history-contact {
+  display: block;
+}
+
+/*History Section Ends*/
 /*Contact Us Section Start*/
 .contact {
   position: relative;
@@ -470,6 +476,21 @@ a {
 /*Media Queries Start*/
 /*Small Devices and cell phones 600px and lower*/
 @media only screen and (max-width: 600px) {
+  #intro h1 {
+    font-size: 2.2rem;
+  }
+  #intro p {
+    margin: 0 7rem;
+  }
+  .img-slider .slide .info h2 {
+    font-size: 4rem;
+    margin-left: -8rem;
+  }
+  .img-slider .slide .info p {
+    padding: 1rem 0;
+    width: 100%;
+    margin-left: -4rem;
+  }
   .slide img {
     -o-object-fit: cover;
        object-fit: cover;
