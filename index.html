@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <script src="main.js" defer></script>
@@ -20,9 +21,8 @@
     <section id="hero">
         <div class="hero container">
             <div>
-                <h1>This</h1>
-                <h1>is</h1>
                 <h1>Apogee</h1>
+                <h1>Streaming Services for Healthcare</h1>
                 <a href="#">Get in Touch</a>
             </div>
         </div>
@@ -34,13 +34,13 @@
     <section id="intro">
         <div class="intro container">
             <div>
-                <h1>Stop Letting the 9-5 Drive you Crazy, take back your time, money, and freedom with S.I.S from Apogee
-                </h1>
+                <h1>More Information, More Control</h1>
             </div>
 
             <div>
-                <p>Grow/Expand your market without changing a thing, just install the Apogee Plugin
-                    A platform to create manageable growth</p>
+                <p>Apogee Streaming Information Services is an Industry-Proven, Cloudbased Healthcare 
+                    Information Monitoring and Production Service Customized to serve Healthcare Providers,
+                    Vendors, and Facilities.</p>
             </div>
 
         </div>
@@ -54,7 +54,7 @@
                 <img src="/images/image-1.jpg" alt="">
 
                 <div class="info">
-                    <h2>Slide 1</h2>
+                    <h2>Corporate Level</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem molestiae quae possimus
                         vel iste, laudantiumacere asperiores? Dolorem a alias earum odio, vitae maiores incidunt
                         recusandae sapiente rem suscipit deleniti?</p>
@@ -65,7 +65,7 @@
                 <img src="/images/image-2.jpg" alt="">
 
                 <div class="info">
-                    <h2>Slide 1</h2>
+                    <h2>Midsized</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem molestiae quae possimus
                         vel iste, laudantiumacere asperiores? Dolorem a alias earum odio, vitae maiores incidunt
                         recusandae sapiente rem suscipit deleniti?</p>
@@ -76,7 +76,7 @@
                 <img src="/images/image-3.jpg" alt="">
 
                 <div class="info">
-                    <h2>Slide 1</h2>
+                    <h2>Small Organization</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem molestiae quae possimus
                         vel iste, laudantiumacere asperiores? Dolorem a alias earum odio, vitae maiores incidunt
                         recusandae sapiente rem suscipit deleniti?</p>
@@ -87,7 +87,7 @@
                 <img src="/images/image-4.jpg" alt="">
 
                 <div class="info">
-                    <h2>Slide 1</h2>
+                    <h2>Power ED in realtime</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem molestiae quae possimus
                         vel iste, laudantiumacere asperiores? Dolorem a alias earum odio, vitae maiores incidunt
                         recusandae sapiente rem suscipit deleniti?</p>
@@ -98,7 +98,7 @@
                 <img src="/images/image-5.jpg" alt="">
 
                 <div class="info">
-                    <h2>Slide 1</h2>
+                    <h2>TBD</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem molestiae quae possimus
                         vel iste, laudantiumacere asperiores? Dolorem a alias earum odio, vitae maiores incidunt
                         recusandae sapiente rem suscipit deleniti?</p>
@@ -126,7 +126,7 @@
                 </div>
 
                 <div>
-                    <p> To be included</p>
+                    <p>Information is a tangible assert. Not an intagible resource</p>
                 </div>
             </div>
         </div>
@@ -145,7 +145,7 @@
 
                 <div class="contact-wrapper">
                     <div class="contact-info">
-                        <div class="info-box">
+                        <div class="info-box" data-aos="fade-right">
                             <div class="icon"><i class="fas fa-mobile-alt"></i></div>
                             <div class="info-text">
                                 <h3>Phone</h3>
@@ -153,7 +153,7 @@
                             </div>
                         </div>
 
-                        <div class="info-box">
+                        <div class="info-box" data-aos="fade-right">
                             <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="info-text">
                                 <h3>Address</h3>
@@ -161,7 +161,7 @@
                             </div>
                         </div>
 
-                        <div class="info-box">
+                        <div class="info-box" data-aos="fade-right">
                             <div class="icon"><i class="fas fa-envelope-open-text"></i></div>
                             <div class="info-text">
                                 <h3>Email</h3>
@@ -199,6 +199,15 @@
     </section>
     <!-- Contact Us Section Ends  -->
 
+    <!--AOS Script-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 200,
+        delay: 20,
+        duration: 1100
+    });
+  </script>
 </body>
 
 </html>
