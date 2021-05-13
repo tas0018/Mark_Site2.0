@@ -112,6 +112,31 @@ a {
   font-size: 2rem;
 }
 
+/*Cards section Starts*/
+#intro #cards-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#intro #cards-wrapper img {
+  max-width: 45%;
+}
+
+#cards-wrapper .card {
+  position: relative;
+}
+
+#cards-wrapper .card .face {
+  width: 300px;
+  height: 200px;
+}
+
+/*Cards section Ends*/
 /*Intro Section End*/
 /* About Section Starts*/
 #about {

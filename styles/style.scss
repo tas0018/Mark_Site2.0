@@ -114,6 +114,30 @@ a {
 
 }
 
+/*Cards section Starts*/
+#intro #cards-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+} 
+
+#intro #cards-wrapper img {
+    max-width: 45%;
+}
+
+#cards-wrapper .card {
+    position: relative;
+}
+
+#cards-wrapper .card .face {
+    width: 300px;
+    height: 200px;
+}
+
+
+/*Cards section Ends*/
+
+
 /*Intro Section End*/
 
 
