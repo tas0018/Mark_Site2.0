@@ -117,23 +117,90 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Arvo;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#intro #cards-wrapper .card-box {
   position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 350px;
+  padding: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
 }
 
-#intro #cards-wrapper img {
-  max-width: 45%;
-}
-
-#cards-wrapper .card {
+#intro #cards-wrapper .card-box .card-icon {
   position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  color: #fff;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0 0 0 0 #00bcd4;
+          box-shadow: 0 0 0 0 #00bcd4;
+  background: #00bcd4;
 }
 
-#cards-wrapper .card .face {
-  width: 300px;
-  height: 200px;
+#intro #cards-wrapper .card-box:hover .card-icon {
+  -webkit-box-shadow: 0 0 0 400px #00bcd4;
+          box-shadow: 0 0 0 400px #00bcd4;
+}
+
+#intro #cards-wrapper .card-box .card-content {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  text-align: center;
+}
+
+#intro #cards-wrapper .card-box:hover .card-content {
+  color: #fff;
+}
+
+#intro #cards-wrapper .card-box:hover .card-content .card-subtext {
+  color: #fff;
+}
+
+#intro #cards-wrapper .card-box .card-content h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.card-box p {
+  margin: 0 !important;
 }
 
 /*Cards section Ends*/

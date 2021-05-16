@@ -117,24 +117,87 @@ a {
 /*Cards section Starts*/
 #intro #cards-wrapper {
     display: flex;
-    position: relative;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    font-family: $mainFont;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+    
+    
 } 
-
-#intro #cards-wrapper img {
-    max-width: 45%;
-}
-
-#cards-wrapper .card {
+ 
+#intro #cards-wrapper .card-box {
     position: relative;
+    width: 350px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-#cards-wrapper .card .face {
-    width: 300px;
-    height: 200px;
+// The dark half of the icon circles
+// #intro #cards-wrapper .card-box:before {
+//     content: '';
+//     width: 50%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background: rgba(255,255,255,.2);
+//     z-index: 2;
+// }
+
+#intro #cards-wrapper .card-box .card-icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    transition: 0.5s;
+    box-shadow: 0 0 0 0 $tertiaryFontColor;
+    background: $tertiaryFontColor;
 }
 
+#intro #cards-wrapper .card-box:hover .card-icon {
+    box-shadow: 0 0 0 400px $tertiaryFontColor;
+}
 
+#intro #cards-wrapper .card-box .card-content {
+    position: relative;
+    z-index: 1;
+    transition: 0.1s;
+    text-align: center;
+}
+
+#intro #cards-wrapper .card-box:hover .card-content {
+    color: #fff;
+}
+
+#intro #cards-wrapper .card-box:hover .card-content .card-subtext {
+    color: #fff;
+}
+
+#intro #cards-wrapper .card-box .card-content h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.card-box p{
+    //Used important selector because the #intro p overrode this css code.
+    margin: 0 !important;
+}
 /*Cards section Ends*/
 
 
