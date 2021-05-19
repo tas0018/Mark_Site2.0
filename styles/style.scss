@@ -123,8 +123,7 @@ a {
     flex-direction: row;
     width: 80%;
     margin-left: 10%;
-    
-    
+    padding-top: 6rem;
 } 
  
 #intro #cards-wrapper .card-box {
@@ -137,6 +136,7 @@ a {
     margin: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    max-height: 278px;
 }
 
 // The dark half of the icon circles
@@ -167,6 +167,7 @@ a {
     transition: 0.5s;
     box-shadow: 0 0 0 0 $tertiaryFontColor;
     background: $tertiaryFontColor;
+    font-size: 3.8rem;
 }
 
 #intro #cards-wrapper .card-box:hover .card-icon {
@@ -233,7 +234,7 @@ z-index: 1;
 }
 
 #about .section-title {
-    font-size: 4rem;
+    font-size: 7rem;
     padding-bottom: 3rem;
     color: $secondaryFontColor;
     text-align: center;
@@ -246,6 +247,22 @@ z-index: 1;
     text-align: center;
     color: $secondaryFontColor;
     padding-bottom: 6rem;
+}
+.about-list {
+    list-style-position: inside;
+}
+
+#about .slide .info h2 {
+    font-size: 8rem;
+    padding-bottom: 3.5rem;
+}
+
+.about-list li {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 200;
+    padding-left: 6rem;
+    
 }
 
 .circle-line-tabs ul {
