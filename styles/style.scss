@@ -46,6 +46,7 @@ a {
     background-position: top center;
     position: relative;
     z-index: 1;
+    animation: animateBg 50s linear infinite;
 }
 
 /*Overlay for hero image*/
@@ -88,6 +89,43 @@ a {
     margin-top: 20px;
 }
 
+.falling-stars {
+    position:  absolute;
+    top: 18%;
+    left: 85%;
+    width: 0.2em;
+    height: 0.2em;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.1),
+        0 0 0 0.3em rgba(255, 255, 255, 0.6),
+        0 0 0 0.4em rgba(255, 255, 255, 0.6);
+    animation: animateStar 3s linear infinite;
+}
+
+.falling-stars:nth-child(2) {
+    top: 0;
+    left: 90%;
+    animation-delay: 0;
+    animation-duration: 2s;    
+}
+
+.falling-stars:nth-child(3) {
+    top: 0;
+    left: 100%;
+    animation-delay: -0.3s;
+    animation-duration: 3s;    
+}
+
+.falling-stars::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30em;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
 
 /*Hero Section End*/
 
@@ -603,3 +641,27 @@ z-index: 1;
         width: auto;
     }
 }
+
+//KeyFrame code starts here
+    @keyframes animateBg {
+        0%,100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+    }
+
+    @keyframes animateStar {
+        0% {
+            transform: rotate(315deg) translateX(0);
+            opacity: 1;
+        }
+        70%{
+           opacity: 1; 
+        }
+        100% {
+            transform: rotate(315deg) translateX(-1000px);
+        }
+    }
+// Keyframe code ends here
