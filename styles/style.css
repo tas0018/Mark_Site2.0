@@ -103,13 +103,15 @@ a {
           box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.1), 0 0 0 0.3em rgba(255, 255, 255, 0.6), 0 0 0 0.4em rgba(255, 255, 255, 0.6);
   -webkit-animation: animateStar 3s linear infinite;
           animation: animateStar 3s linear infinite;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .falling-stars:nth-child(2) {
   top: 0;
   left: 90%;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
 }
@@ -121,6 +123,15 @@ a {
           animation-delay: -0.3s;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
+}
+
+.falling-stars:nth-child(4) {
+  top: 0;
+  left: 95%;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
 }
 
 .falling-stars::before {
