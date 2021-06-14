@@ -38,7 +38,7 @@ a {
 /*Nav Code Here*/
 /*Hero Section Start*/
 #hero {
-  background-image: url(/images/top-down-earth.jpg);
+  background-image: url(/images/heroImage2.jpg);
   background-size: cover;
   background-position: top center;
   position: relative;
@@ -383,8 +383,8 @@ a {
 }
 
 /*History Section Starts*/
-.history .history-contact {
-  display: block;
+.history-content {
+  text-align: center;
 }
 
 /*History Section Ends*/
@@ -406,7 +406,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url(/images/contact-us-background.jpg);
+  background: url(/images/contact-us-section.jpg);
   background-size: cover;
   margin-top: 5rem;
 }

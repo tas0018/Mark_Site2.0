@@ -41,7 +41,7 @@ a {
 
 /*Hero Section Start*/
 #hero {
-    background-image: url(/images/top-down-earth.jpg);
+    background-image: url(/images/heroImage2.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -369,9 +369,9 @@ z-index: 1;
 }
 
 /*History Section Starts*/
- .history .history-contact{
-     display: block;
- }
+.history-content{
+    text-align: center;
+}
 /*History Section Ends*/
 
 /*Contact Us Section Start*/
@@ -383,7 +383,7 @@ z-index: 1;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(/images/contact-us-background.jpg);
+    background: url(/images/contact-us-section.jpg);
     background-size: cover;
     margin-top: 5rem;
 }
