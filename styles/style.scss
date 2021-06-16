@@ -371,6 +371,24 @@ z-index: 1;
 /*History Section Starts*/
 .history-content{
     text-align: center;
+    padding: 10% 15%;
+    color: #515151;
+}
+
+.history-content h1 {
+    font-size: 5rem;
+    margin-top: -9rem;
+}
+
+.history-content p {
+    font-size: 2.7rem;
+    line-height: 1.5;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+}
+
+.history-content h2 {
+    font-size: 2.4rem;
 }
 /*History Section Ends*/
 
