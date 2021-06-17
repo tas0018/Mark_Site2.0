@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 
 /*Sass Variables*/
-$primaryVertNavColor: rgb(34, 72, 240);
+//Font Variables
 $mainFont: Arvo;
+$fontLight: 300;
+$fontMedium: 500;
+$fontBold: 700;
+
+//Colors
 $mainFontColor: #515151;
+$primaryVertNavColor: rgb(34, 72, 240);
 $secondaryFontColor: white;
 $tertiaryFontColor: #00bcd4;
 
@@ -36,7 +42,58 @@ a {
 }
 
 /*Nav Code Starts*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 10;
+}
 
+header.sticky {
+    padding: 20px 100px;
+    background: #000;
+}
+
+header .logo {
+    position: relative;
+    font-weight: $fontBold;
+    color: $secondaryFontColor;
+    text-decoration: none;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    z-index: 10;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: $secondaryFontColor;
+    letter-spacing: 2px;
+    font-weight: $fontMedium;
+    transition: 0,6s;
+    font-size: 1.5rem;
+}
 /*Nav Code Here*/
 
 /*Hero Section Start*/

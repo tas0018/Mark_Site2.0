@@ -4,12 +4,12 @@ const tabContents = document.querySelectorAll('[data-tab-content]')
 
 
 tabs.forEach(tab => {
-    tab.addEventListener('click',()=> {
+    tab.addEventListener('click', () => {
         const target = document.querySelector(tab.dataset.tabTarget)
         tabContents.forEach(tabContent => {
             tabContent.classList.remove('active')
         })
-        
+
         target.classList.add('active')
     })
 })
@@ -23,7 +23,7 @@ var btns = document.querySelectorAll('.btn');
 let currentSlide = 1;
 
 // javacript slider manual navigation
-var manualNav = function(manual){
+var manualNav = function (manual) {
     slides.forEach((slide) => {
         slide.classList.remove('activeSlide');
 
@@ -37,13 +37,17 @@ var manualNav = function(manual){
 }
 
 btns.forEach((btn, i) => {
-    btn.addEventListener("click", ()=> {
+    btn.addEventListener("click", () => {
         manualNav(i);
         currentSlide = i;
     });
 });
 
-/*Dot Nov code */
-
+/*Sticky Nav code Starts*/
+window.addEventListener("scroll", function () {
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+})
+/*Sticky Nav code Ends*/
 
 
