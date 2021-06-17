@@ -15,7 +15,7 @@ $tertiaryFontColor: #00bcd4;
 
 //Nav Variables
 $primaryNavColor: rgba(13, 110, 139, 0.75);
-$overlayNavColor: rgba(24, 39, 51, 0.85);
+$overlayNavColor: rgba(24, 39, 51, 0.9);
 $menuSpeed: 1s;
 
 * {
@@ -104,6 +104,9 @@ header .nav-links li a {
 .menu-wrapper {
     top: 0;
     right: 0;
+
+    // Hide mobile nav on desktop view
+    display: none;
 }
 
 .menu-wrapper .toggler {
@@ -125,7 +128,7 @@ header .nav-links li a {
     width: 60px;
     height: 60px;
     padding: 1rem;
-    background: $primaryNavColor;
+    // background: $primaryNavColor;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -766,6 +769,17 @@ z-index: 1;
 
 /*Small Devices and cell phones 600px and lower*/
 @media only screen and (max-width: 600px) {
+    .menu-wrapper {
+        display: block;
+    }
+
+    header .nav-links {
+        display: none;
+    }
+
+    header .logo {
+        margin-left: -4rem;
+    }
 
     #intro h1 {
         font-size: 5rem;
