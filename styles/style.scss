@@ -13,6 +13,10 @@ $primaryVertNavColor: rgb(34, 72, 240);
 $secondaryFontColor: white;
 $tertiaryFontColor: #00bcd4;
 
+//Nav Variables
+$primaryNavColor: rgba(13, 110, 139, 0.75);
+$overlayNavColor: rgba(24, 39, 51, 0.85);
+$menuSpeed: 1s;
 
 * {
     padding: 0;
@@ -72,19 +76,19 @@ header .logo {
     z-index: 10;
 }
 
-header ul {
+header .nav-links {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header ul li {
+header .nav-links li {
     position: relative;
     list-style: none;
 }
 
-header ul li a {
+header .nav-links li a {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
@@ -94,7 +98,150 @@ header ul li a {
     transition: 0,6s;
     font-size: 1.5rem;
 }
-/*Nav Code Here*/
+
+//mobile nav code
+
+.menu-wrapper {
+    top: 0;
+    right: 0;
+}
+
+.menu-wrapper .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.menu-wrapper .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: $primaryNavColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Hamburger lines*/
+.menu-wrapper .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: $secondaryFontColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+
+/*Top and bottom lines*/
+.menu-wrapper .hamburger > div::before,
+.menu-wrapper .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.menu-wrapper .hamburger > div::after {
+    top: 10px;
+}
+
+/*Toggle Animate*/
+.menu-wrapper .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+/*Turn lines into X*/
+.menu-wrapper .toggler:checked + .hamburger > div::before,
+.menu-wrapper .toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/*Rotate on hover when checked*/
+.menu-wrapper .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+/*Show menu*/
+.menu-wrapper .toggler:checked ~ .mobile-nav-menu {
+    visibility: visible;
+}
+
+.menu-wrapper .toggler:checked ~ .mobile-nav-menu > div {
+    transform: scale(1);
+    transition-duration: $menuSpeed;
+}
+
+.menu-wrapper .toggler:checked ~ .mobile-nav-menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrapper .mobile-nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*moble nav overlay*/
+.menu-wrapper .mobile-nav-menu > div {
+    background: $overlayNavColor;
+    // border-radius: 50%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 400vw;
+    height: 400vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrapper .mobile-nav-menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrapper .mobile-nav-menu > div > div > ul > li {
+    list-style: none;
+    color: $secondaryFontColor;
+    font-size: 3rem;
+    font-weight: $fontBold;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.menu-wrapper .mobile-nav-menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+/*Nav Code ends*/
 
 /*Hero Section Start*/
 #hero {
@@ -631,6 +778,14 @@ z-index: 1;
 
     #intro #cards-wrapper {
         flex-direction: column;
+    }
+
+    #intro #cards-wrapper .card-box {
+        width: 280px;
+    }
+
+    #intro #cards-wrapper .card-box .card-content .card-subtext {
+        font-size: 1.8rem;
     }
 
     #about .slide .info h2 {
