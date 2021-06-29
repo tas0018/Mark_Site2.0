@@ -760,6 +760,14 @@ header a.logo img {
   color: white;
 }
 
+.contact .contact-info .info-box .info-text.number {
+  margin-left: 25%;
+}
+
+.contact .contact-info .info-box .info-text.address {
+  margin-left: 15%;
+}
+
 .contact .contact-info .info-box .info-text h3 {
   font-weight: 500;
   color: #00bcd4;
@@ -939,12 +947,19 @@ header a.logo img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: -15%;
   }
   .contact .contact-info .info-box .icon {
     width: 6rem;
   }
   .contact .contact-form {
     width: auto;
+  }
+  .contact .contact-info .info-box .info-text.number {
+    margin-left: 18%;
+  }
+  .contact .contact-info .info-box .info-text.address {
+    margin-left: 10%;
   }
 }
 /*# sourceMappingURL=style.css.map */
