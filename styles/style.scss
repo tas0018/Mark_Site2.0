@@ -838,9 +838,19 @@ z-index: 1;
         font-size: 1.8rem;
     }
 
+    #about .img-slider {
+        height: 153vh;
+    }
+
     #about .slide .info h2 {
         font-size: 4rem;
         margin-left: -8rem;
+    }
+
+    #about .slide .info .about-closing-headline {
+        font-size: 3rem;
+        right: auto;
+        width: 55%;
     }
 
     #about .slide .info p {
@@ -864,6 +874,7 @@ z-index: 1;
     
     .slide img {
         object-fit: cover;
+        height: 153vh;
     }
     
     .history-content h1 {

@@ -902,9 +902,17 @@ header a.logo img {
   #intro #cards-wrapper .card-box .card-content .card-subtext {
     font-size: 1.8rem;
   }
+  #about .img-slider {
+    height: 153vh;
+  }
   #about .slide .info h2 {
     font-size: 4rem;
     margin-left: -8rem;
+  }
+  #about .slide .info .about-closing-headline {
+    font-size: 3rem;
+    right: auto;
+    width: 55%;
   }
   #about .slide .info p {
     padding: 1rem 0;
@@ -923,6 +931,7 @@ header a.logo img {
   .slide img {
     -o-object-fit: cover;
        object-fit: cover;
+    height: 153vh;
   }
   .history-content h1 {
     margin-top: 5rem;
