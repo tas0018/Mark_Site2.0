@@ -14,6 +14,8 @@ tabs.forEach(tab => {
     })
 })
 
+//jquery code move to top of section on click
+
 const circle = document.querySelector('#circle-one');
 console.log()
 
