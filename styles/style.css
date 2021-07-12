@@ -639,12 +639,46 @@ header a.logo img {
   color: white;
   width: 16px;
   height: 16px;
-  margin: 1rem;
+  margin: 1.5rem;
   cursor: pointer;
 }
 
 .img-slider .navigation .btn.activeSlide {
   color: #00bcd4;
+}
+
+.img-slider .navigation .btn::before,
+.img-slider .navigation .btn::after {
+  --scale: 0;
+  position: absolute;
+  top: -2rem;
+  left: auto;
+  -webkit-transform: translateX(-40%) scale(var(--scale));
+          transform: translateX(-40%) scale(var(--scale));
+  -webkit-transition: 150ms -webkit-transform;
+  transition: 150ms -webkit-transform;
+  transition: 150ms transform;
+  transition: 150ms transform, 150ms -webkit-transform;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+.img-slider .navigation .btn::before {
+  padding: 0.5rem;
+  background: #fff;
+  content: attr(data-tooltip);
+  color: black;
+  font-size: 1.2rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.img-slider .navigation .btn:hover::before,
+.img-slider .navigation .btn:hover::after {
+  --scale: 1;
 }
 
 /*History Section Starts*/
