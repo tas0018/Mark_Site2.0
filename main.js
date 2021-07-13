@@ -2,6 +2,9 @@ const tabs = document.querySelectorAll(['[data-tab-target]'])
 const tabContents = document.querySelectorAll('[data-tab-content]')
 
 
+//Smooth scroll using jquery
+
+
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -14,7 +17,13 @@ tabs.forEach(tab => {
     })
 })
 
-//jquery code move to top of section on click
+//jquery code move to top of PoweEd section on click
+$(".btn").click(function () {
+    $('html,body').animate({
+        scrollTop: $(".img-slider").offset().top
+    },
+        'slow');
+});
 
 const circle = document.querySelector('#circle-one');
 console.log()

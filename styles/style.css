@@ -518,7 +518,7 @@ header a.logo img {
 }
 
 #about .slide #first-slide-text p {
-  padding-top: 40%;
+  margin-top: 35rem;
 }
 
 .about-list li {
@@ -606,6 +606,16 @@ header a.logo img {
   position: absolute;
   top: 0;
   padding: 9rem 13rem;
+  width: 100%;
+}
+
+.img-slider .slide .info #first-slide-text {
+  width: 100%;
+  margin: auto;
+}
+
+.img-slider .slide .info #first-slide-text p {
+  padding: 0;
 }
 
 .img-slider .slide .info h2 {
@@ -950,6 +960,9 @@ header a.logo img {
   #about .img-slider {
     height: 153vh;
   }
+  #about .slide .info {
+    padding-right: 10%;
+  }
   #about .slide .info h2 {
     font-size: 4rem;
     margin-left: -8rem;
@@ -962,12 +975,20 @@ header a.logo img {
   #about .slide .info p {
     padding: 1rem 0;
     width: 100%;
-    margin-left: -4rem;
+    margin-left: -45%;
+    padding-right: 0;
+  }
+  #about .slide #first-slide-text p {
+    margin-top: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   #about .slide .info ul li {
     font-size: 2rem;
     padding-left: 0;
     margin-left: -6rem;
+    width: auto;
   }
   #about .slide #lease-slide {
     padding: 9rem 9rem;
@@ -1036,13 +1057,6 @@ header a.logo img {
     left: 4%;
     top: 40%;
     text-align: center;
-  }
-}
-
-/*Screens 1200px and above*/
-@media only screen and (min-width: 1500px) {
-  .img-slider .slide .info p {
-    padding-left: 35%;
   }
 }
 /*# sourceMappingURL=style.css.map */
