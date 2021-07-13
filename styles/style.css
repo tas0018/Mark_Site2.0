@@ -531,8 +531,15 @@ header a.logo img {
 
 #about .slide .info .about-closing-headline {
   width: 80%;
-  position: absolute;
-  right: 0;
+  position: relative;
+  text-align: end;
+  padding-bottom: 0%;
+  padding-right: 3rem;
+  font-size: 3.8;
+}
+
+#about .slide .info #closing-headline-one {
+  padding-top: 10%;
 }
 
 .circle-line-tabs ul {
@@ -970,7 +977,10 @@ header a.logo img {
   #about .slide .info .about-closing-headline {
     font-size: 3rem;
     right: auto;
-    width: 55%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: left;
   }
   #about .slide .info p {
     padding: 1rem 0;
