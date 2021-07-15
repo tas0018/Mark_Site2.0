@@ -913,6 +913,10 @@ z-index: 1;
         text-align: left;
     }
 
+    #about .slide .info #closing-headline-one {
+        padding-top: 0%;
+    }
+
     #about .slide .info p {
         padding: 1rem 0;
         width: 100%;
@@ -998,8 +1002,173 @@ z-index: 1;
     }
 }
 
+// Galaxy S4, S5, Note 3
+@media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 3) 
+    and (orientation: portrait) {
+        #about .slide .info #closing-headline-one {
+            padding-top: 0%;
+        }
+
+         #about .img-slider {
+            height: 170vh;
+        }
+
+        .slide img {
+            object-fit: cover;
+            height: 170vh;
+        }
+}
+
+// Nexus 5
+@media only screen 
+    and (min-device-width: 360px) 
+    and (max-device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+        #about .img-slider {
+            height: 170vh;
+        }
+
+        .slide img {
+            object-fit: cover;
+            height: 170vh;
+        }
+}
+// Nexus 7
+@media only screen 
+    and (device-width: 600px) 
+    and (device-height: 960px) 
+    and (orientation: portrait) {
+        #about .img-slider {
+            height: 100vh;
+        }
+
+        .slide img {
+            object-fit: cover;
+            height: 100vh;
+        }
+        
+        #about .slide #first-slide-text {
+            margin-left: -10%;
+        }
+
+        #about .slide #first-slide-text p {
+            margin-top: 50%;
+        }
+
+        #about .slide .info p {
+            margin-left: 0%;
+        }
+}
+
+// Google Pixel 2
+@media only screen 
+    and (device-width: 411px) 
+    and (device-height: 731px) 
+    and (orientation: portrait) {
+        #about .img-slider {
+            height: 125vh;
+        }
+
+        .slide img {
+            object-fit: cover;
+            height: 125vh;
+        }
+}
+// Iphone 5
+@media only screen 
+    and (device-width: 320px) 
+    and (device-height: 568px) 
+    and (orientation: portrait) {
+        #about .slide .info h2 {
+            font-size: 3.5rem;
+        }
+
+        #about .slide .info .about-closing-headline {
+            font-size: 2.5rem;
+        }
+
+        #about .slide .info ul li {
+            font-size: 1.5rem;
+        }
+
+        #about .img-slider {
+            height: 140vh;
+        }
+        
+
+        .slide img {
+            object-fit: cover;
+            height: 140vh;
+        }
+}
+
+// iphone X
+@media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 812px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) { 
+        #about .img-slider {
+            height: 120vh;
+        }
+
+        .slide img {
+            object-fit: cover;
+            height: 120vh;
+        }
+}
+
+// ipad
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    #about .slide .info #closing-headline-one {
+        padding-top: 0%;
+    }
+
+    #about .slide .info .about-closing-headline {
+        width: initial;
+    }
+
+     /*Hides on hover on mobile devices*/
+     .img-slider .navigation .btn:hover::before,
+     .img-slider .navigation .btn:hover::after {
+     --scale: 0;
+     }
+}
+
+// ipad Pro 10.5
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #about .img-slider {
+        height: 80vh;
+    }
+
+    .slide img {
+        object-fit: cover;
+        height: 80vh;
+    }
+
+    #intro .container {
+        min-height: 70vh;
+    }
+}
 /*Laptop and desktops 992px and up*/
-@media only screen and (min-width: 992px) {
+@media only screen 
+    and (min-width: 992px) {
     #hero h1{
         position: absolute;
         left: 4%;
