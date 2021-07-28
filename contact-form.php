@@ -1,16 +1,17 @@
 <?php 
+ini_set('display_errors', 1);
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $mailFrom = $_POST['email'];
     $message = $_POST['message'];
-    $subject = "Apogee Site Email"
+    $subject = "Apogee Site Email";
 
-    $mailTo = "tas0018@auburn.edu"
+    $mailTo = "webtest001@yahoo.com";
     $headers = "From: ".$mailFrom;
-    $txt =  "You have received an email from ".$name.".\n\n".$message;
+    $txt =  "test";
 
-    mail($mailTo, $subject, $txt, $headers);
+    mail('webtest001@yahoo.com', $subject, $txt, $headers);
     header("Location: index.php?mailsend");
 }
 ?>
