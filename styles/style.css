@@ -929,6 +929,21 @@ header a.logo img {
   margin-left: 27%;
 }
 
+footer {
+  background: #000;
+  height: auto;
+  width: 100vw;
+  font-family: Arvo;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.footer-bottom p {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
 /*Contact Us Section End*/
 /*Media Queries Start*/
 /*Small Devices and cell phones 600px and lower*/
