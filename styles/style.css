@@ -12,7 +12,8 @@ html {
   font-family: Arvo;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -98,8 +99,8 @@ header .nav-links li a {
   color: white;
   letter-spacing: 2px;
   font-weight: 500;
-  -webkit-transition: 0,6s;
-  transition: 0,6s;
+  -webkit-transition: 0, 6s;
+  transition: 0, 6s;
   font-size: 1.5rem;
 }
 
@@ -167,7 +168,7 @@ header a.logo img {
 /*Top and bottom lines*/
 .menu-wrapper .hamburger > div::before,
 .menu-wrapper .hamburger > div::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 3;
   top: -10px;
@@ -299,14 +300,14 @@ header a.logo img {
 
 /*Overlay for hero image*/
 #hero::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: .4;
+  opacity: 0.4;
   z-index: -2;
 }
 
@@ -461,14 +462,14 @@ header a.logo img {
 }
 
 #about::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   background-color: blue;
-  opacity: .4;
+  opacity: 0.4;
   z-index: -1;
 }
 
@@ -539,7 +540,7 @@ header a.logo img {
 }
 
 #about .slide .info #closing-headline-one {
-  padding-top: 10%;
+  padding-top: 0%;
 }
 
 .circle-line-tabs ul {
@@ -601,8 +602,8 @@ header a.logo img {
 .img-slider .slide.activeSlide {
   -webkit-clip-path: circle(150% at 0 50%);
           clip-path: circle(150% at 0 50%);
-  -webkit-transition: .90s;
-  transition: .90s;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
   -webkit-transition-property: -webkit-clip-path;
   transition-property: -webkit-clip-path;
   transition-property: clip-path;
@@ -630,7 +631,7 @@ header a.logo img {
   font-size: 5rem;
   text-transform: uppercase;
   font-weight: 800;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
 }
 
 .img-slider .slide .info p {
@@ -742,7 +743,7 @@ header a.logo img {
           flex-direction: column;
   background: url(/images/contact-us-section.jpg);
   background-size: cover;
-  background-color: #C9C9C9;
+  background-color: #c9c9c9;
   background-blend-mode: multiply;
   margin-top: 5rem;
 }
@@ -901,7 +902,7 @@ header a.logo img {
   position: absolute;
   left: 0;
   padding: 0.2rem;
-  margin: .7rem 0;
+  margin: 0.7rem 0;
   pointer-events: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
