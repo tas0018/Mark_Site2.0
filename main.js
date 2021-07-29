@@ -39,7 +39,6 @@ $("#power-slide").on("swipeleft", function (e) {
   btns[currentSlide + 1].classList.add("activeSlide");
   currentSlide = 1;
   console.log(currentSlide);
-  console.log(screenSize);
 });
 
 //Jquery code for swiping functionality for slide 2
